@@ -22,6 +22,9 @@ gem "autoprefixer-rails"
 gem "simple_form"
 gem 'faker'
 gem 'irbtools', require: 'irbtools/binding'
+gem 'rails-assets-awesomplete', source: 'https://rails-assets.org'
+
+gem 'searchkick'
 
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets

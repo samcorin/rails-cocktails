@@ -2,7 +2,9 @@
   color: white;
   text-align: center;
   height: 100vh;
+  width: 100vw;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('banner-photo.jpeg') no-repeat center center;
   background-size: cover !important;
   display: flex;
   align-items: center;

@@ -3,38 +3,34 @@
 ASK
 dose_path refers to the cocktail
 but dose alone refers to the correct id for deletion.
+livecode example broke after a few adds
 
  -->
+
 <div class="container">
   <div class="cocktail-header">
     <h2><%= @cocktail.name %></h2>
+    <!-- <ul> -->
+    <% @cocktail.doses.each do |dose| %>
+      <!-- <li> -->
+        <p>
+          <%= dose.description %>
+          <%= dose.ingredient.name %>
+          -
+          <%= link_to 'Delete', dose, method: :delete %>
+        </p>
+      <!-- </li> -->
+    <% end %>
+    <!-- </ul> -->
   </div>
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
         <div class="wrapper">
-        <div class="inner-wrapper">
-          <% if !@cocktail.doses.empty? %>
-            <ul>
-            <% @cocktail.doses.each do |dose| %>
-              <li>
-                Desc <%= dose.description %>
-                <br><%= dose.ingredient.name %><br>
-                dose.id <%= dose.id %>
-                dose.cocktail_id: <%= dose.cocktail_id %>
-                dose_path: <%= dose_path %>
-                -
-                <%= link_to 'Delete', dose, method: :delete %>
-
-              </li>
-              <br>
-            <% end %>
-
-            </ul>
-          <% end %>
-          <h3>New Dose</h3>
-          <%= render 'doses/form' %>
-          <br>
-        </div>
+          <div class="inner-wrapper">
+            <h4>New Dose</h4>
+            <%= render 'doses/form' %>
+            <br>
+          </div>
         </div>
     </div>
   </div>

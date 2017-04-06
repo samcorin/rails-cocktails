@@ -3,11 +3,14 @@
 
   <div class="form-inputs">
     <%= f.input :description %>
-    <%= f.input :ingredient_id, collection: Ingredient.all.each { |item| item.id }  %>
+
+    <%= f.input :ingredient, collection: Ingredient.all.each { |item| item.id }  %>
+
+    <%= f.input :ingredient, collection: @ingredients%>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit %>
-    <%= link_to "Back", cocktails_path, class: "float-right" %>
+    <%= link_to "Back", cocktails_path, class: "float-right back-btn" %>
   </div>
 <% end %>

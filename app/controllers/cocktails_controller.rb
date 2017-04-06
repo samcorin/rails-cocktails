@@ -9,6 +9,13 @@ class CocktailsController < ApplicationController
     @dose = Dose.new
   end
 
+  def search
+    @term = params[:term] || nil
+    @ingredients = []
+    @ingredients = Ingredient.where('name LIKE ?', "%#{term}%") if @term
+    # render json: products
+  end
+
   def new
     @cocktail = Cocktail.new
   end
