@@ -1,3 +1,10 @@
+<!--
+
+ASK
+dose_path refers to the cocktail
+but dose alone refers to the correct id for deletion.
+
+ -->
 <div class="container">
   <div class="cocktail-header">
     <h2><%= @cocktail.name %></h2>
@@ -8,13 +15,18 @@
         <div class="inner-wrapper">
           <% if !@cocktail.doses.empty? %>
             <ul>
-            <% @cocktail.doses.each do |recipe| %>
+            <% @cocktail.doses.each do |dose| %>
               <li>
-                <%= recipe.description %>
-                <%= recipe.ingredient.name %>
+                Desc <%= dose.description %>
+                <br><%= dose.ingredient.name %><br>
+                dose.id <%= dose.id %>
+                dose.cocktail_id: <%= dose.cocktail_id %>
+                dose_path: <%= dose_path %>
                 -
-                <%= link_to 'Delete', cocktail_dose_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%= link_to 'Delete', dose, method: :delete %>
+
               </li>
+              <br>
             <% end %>
 
             </ul>
@@ -27,4 +39,3 @@
     </div>
   </div>
 </div>
-
