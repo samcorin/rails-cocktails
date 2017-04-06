@@ -1,10 +1,8 @@
-<h1>New dose Page</h1>
-
-<%= simple_form_for[(@dose, @ingredient)] do |f| %>
+<%= simple_form_for([@cocktail, @dose]) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :ingredient %>
+    <%= f.input :ingredient, collection: Ingredient.all  %>
     <%= f.input :description %>
   </div>
 

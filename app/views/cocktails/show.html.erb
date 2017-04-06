@@ -1,2 +1,22 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8">
+      <h1><%= @cocktail.name %></h1>
+      <% if !@cocktail.doses.empty? %>
+
+        <% @cocktail.doses.each do |recipe| %>
+          <%= recipe.description %>
+          <%= recipe.ingredient %>
+        <% end %>
+
+      <% end %>
+      <h2>New Dose</h2>
+      <%= render 'doses/form' %>
+      <br>
+      <%= link_to "Back", cocktails_path %>
+    </div>
+  </div>
+</div>
+
+
+<!-- :collection => Apple.map { |a| [ a.format_name, a.id ] } -->

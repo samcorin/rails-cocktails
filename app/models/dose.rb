@@ -1,4 +1,7 @@
 class Dose < ApplicationRecord
   belongs_to :cocktail
-  has_many :ingredients, through: :cocktails
+  belongs_to :ingredient
+
+  validates :cocktail_id, :uniqueness => {:scope => :ingredient_id }
+
 end
