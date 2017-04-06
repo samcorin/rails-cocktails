@@ -8,12 +8,17 @@
 require 'open-uri'
 require 'json'
 
-Ingredient.destroy_all
-puts "Adding Ingredients"
+# Ingredient.destroy_all
+# puts "Adding Ingredients"
 
-JSON.parse(open("http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list").read).each do |ingredient|
-  # Ingredient.create()
-  ingredient[1].each do |item|
-    Ingredient.create(name: item["strIngredient1"])
-  end
+# JSON.parse(open("http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list").read).each do |ingredient|
+#   ingredient[1].each do |item|
+#     Ingredient.create(name: item["strIngredient1"])
+#   end
+# end
+
+50.times do
+  Cocktail.create(
+    name: Faker::Superhero.name
+  )
 end

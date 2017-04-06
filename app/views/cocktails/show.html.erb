@@ -1,20 +1,26 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-8">
-      <h1><%= @cocktail.name %></h1>
-      <% if !@cocktail.doses.empty? %>
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <h1><%= @cocktail.name %></h1>
+        <% if !@cocktail.doses.empty? %>
+          <ul>
+          <% @cocktail.doses.each do |recipe| %>
+            <li>
+              <%= recipe.description %>
+              <%= recipe.ingredient.name %>
+              -
+              <%= link_to 'Delete', cocktail_dose_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' } %>
 
-        <% @cocktail.doses.each do |recipe| %>
-          <%= link_to 'Delete', cocktail_dose_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' } %>
-          <%= recipe.description %>
-          <%= recipe.ingredient.name %>
+            </li>
+          <% end %>
+
+          </ul>
         <% end %>
-
-      <% end %>
-      <h2>New Dose</h2>
-      <%= render 'doses/form' %>
-      <br>
-      <%= link_to "Back", cocktails_path %>
+        <h2>New Dose</h2>
+        <%= render 'doses/form' %>
+        <br>
+        <%= link_to "Back", cocktails_path %>
     </div>
   </div>
 </div>
+

@@ -1,10 +1,18 @@
-  <%= link_to "New Cocktail", new_cocktail_path %>
-<h1>Cocktails list</h1>
+<%= render 'shared/banner' %>
 <br>
-<% if @cocktails.empty? %>
-  <p>Theres nothing in the list</p>
-<% else %>
-  <% @cocktails.each do |cocktail| %>
-    <p><strong>Name: </strong><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+<div class="container">
+  <% if @cocktails.empty? %>
+    <p>Theres nothing in the list</p>
+  <% else %>
+  <div class="masonry">
+  <!-- <div class="grid"> -->
+      <% @cocktails.each do |cocktail| %>
+        <%= link_to cocktail_path(cocktail) do %>
+          <div class="item">
+              <h4><%= cocktail.name %></h4>
+          </div>
+        <% end %>
+      <% end %>
   <% end %>
-<% end %>
+  </div>
+</div>

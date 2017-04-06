@@ -20,6 +20,7 @@ gem "bootstrap-sass"
 gem "font-awesome-sass"
 gem "autoprefixer-rails"
 gem "simple_form"
+gem 'faker'
 
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
