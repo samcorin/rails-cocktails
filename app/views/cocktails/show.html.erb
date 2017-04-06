@@ -5,8 +5,9 @@
       <% if !@cocktail.doses.empty? %>
 
         <% @cocktail.doses.each do |recipe| %>
+          <%= link_to 'Delete', cocktail_dose_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' } %>
           <%= recipe.description %>
-          <%= recipe.ingredient %>
+          <%= recipe.ingredient.name %>
         <% end %>
 
       <% end %>
@@ -17,6 +18,3 @@
     </div>
   </div>
 </div>
-
-
-<!-- :collection => Apple.map { |a| [ a.format_name, a.id ] } -->
