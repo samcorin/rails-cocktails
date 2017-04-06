@@ -52,13 +52,13 @@ li {
   }
 }
 
-@media only screen and (min-width: 1100px) {
-  .masonry {
-      -moz-column-count: 5;
-      -webkit-column-count: 5;
-      column-count: 5;
-  }
-}
+// @media only screen and (min-width: 1100px) {
+//   .masonry {
+//       -moz-column-count: 5;
+//       -webkit-column-count: 5;
+//       column-count: 5;
+//   }
+// }
 
 .item {
     background-color: #eee;
@@ -70,8 +70,8 @@ li {
     margin: 0 0 1em;
     width: 100%;
     padding: 5px;
-    height: 20vh;
-    min-height: 140px;
+    // height: 20vh;
+    min-height: 180px;
 }
 
 a:hover {
@@ -80,4 +80,16 @@ a:hover {
 
 a {
   color: $green;
+}
+
+.wrapper {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.float-right {
+  float: right;
 }

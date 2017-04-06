@@ -14,7 +14,7 @@ def scrape_craiglist_antiques(city)
 end
 
 def scrape_cocktail_site(cocktail)
-  product = "antiques"
+  product = "gin and toni"
   url = "https://#{city}.craigslist.jp/search/sss?query=#{product}&sort=rel"
   list = []
   doc = Nokogiri::HTML(open(url))
