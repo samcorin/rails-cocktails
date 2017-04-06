@@ -1,9 +1,11 @@
 <div class="container">
+  <div class="cocktail-header">
+    <h2><%= @cocktail.name %></h2>
+  </div>
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
         <div class="wrapper">
         <div class="inner-wrapper">
-          <h2><%= @cocktail.name %></h2>
           <% if !@cocktail.doses.empty? %>
             <ul>
             <% @cocktail.doses.each do |recipe| %>
@@ -12,7 +14,6 @@
                 <%= recipe.ingredient.name %>
                 -
                 <%= link_to 'Delete', cocktail_dose_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' } %>
-
               </li>
             <% end %>
 
