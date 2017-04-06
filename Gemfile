@@ -1,6 +1,5 @@
-source 'https://rubygems.org' do
-
-end
+source 'https://rubygems.org'
+ruby '2.3.3'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -19,11 +18,10 @@ gem 'puma', '~> 3.0'
 # Assets
 gem "bootstrap-sass"
 gem "font-awesome-sass"
-gem "simple_form"
 gem "autoprefixer-rails"
-gem 'rails-assets-materialize', source: 'https://rails-assets.org'
+gem "simple_form"
 
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
