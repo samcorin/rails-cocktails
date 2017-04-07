@@ -4,6 +4,7 @@ $(document).ready(function() {
   var lastScrollTop = 0;
   var delta = 5;
   var navbarHeight = $('header').outerHeight();
+  $('header').addClass('header-white');
 
   $(window).scroll(function(event){
     didScroll = true;
@@ -20,11 +21,11 @@ $(document).ready(function() {
     var st = $(this).scrollTop();
 
     // Change background color / add class / remove class
-    if (st > 500) {
-      $('header').addClass('header-white', 300);
-    } else {
-      $('header').removeClass('header-white', 300);
-    }
+    // if (st > 500) {
+      // $('header').addClass('header-white', 300);
+    // } else {
+    //   $('header').removeClass('header-white', 300);
+    // }
 
     // Make sure they scroll more than delta
     if(Math.abs(lastScrollTop - st) <= delta)

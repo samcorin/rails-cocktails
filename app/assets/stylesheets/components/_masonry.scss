@@ -1,6 +1,8 @@
 // CSS-ONLY MASONRY
 .masonry {
-    column-count: 3;
+    display: inline-block;
+    // clear: both;
+    // column-count: 3;
     column-gap: 1em;
 }
 

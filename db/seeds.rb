@@ -17,8 +17,10 @@ JSON.parse(open("http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list").re
   end
 end
 
-50.times do
-  Cocktail.create(
-    name: Faker::Superhero.name
-  )
-end
+puts "Finshed adding ingredients."
+
+# 50.times do
+#   Cocktail.create(
+#     name: Faker::Superhero.name
+#   )
+# end
