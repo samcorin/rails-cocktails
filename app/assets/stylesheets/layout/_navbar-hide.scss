@@ -32,6 +32,8 @@ header {
     z-index: 30;
     margin-bottom: 10px;
     /*padding: 10px;*/
+    background-attachment: fixed;
+    display: block;
 }
 
 
@@ -58,6 +60,7 @@ header ul li {
   list-style-type: none;
   padding: 10px;
   margin: auto 10px;
+  margin-top: -45px;
 }
 
 .nav-up {

@@ -1,22 +1,24 @@
 <header class="nav-down">
-<div class="container">
-  <div class="nav-wrapper">
-    <!-- <div class="logo" >Cocktails</div> -->
-    <%= link_to "Drinks", cocktails_path, class: "logo" %>
+  <div class="container">
+    <div class="nav-wrapper">
+      <!-- <div class="logo" >Cocktails</div> -->
+      <%= link_to cocktails_path do %>
+        <%= image_tag 'home-btn.png', height: 50, alt: 'a face that is unnervingly happy', class: 'nav-img' %>
+      <% end %>
 
-    <!-- Search form -->
-    <div class="links">
-    <!-- <form action="" class="navbar-wagon-search" style="float:left">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search for cocktails">
-      <button type="submit" class="navbar-wagon-search-btn">
-        <i class="fa fa-search"></i>
-      </button>
-    </form> -->
-      <ul class="list-inline">
-      <li class="list-inline-item"><%= link_to "Add", new_cocktail_path, class: "list-inline-item" %></li>
-        <!-- <a href=""><li class="list-inline-item">Add</li></a> -->
-      </ul>
+      <!-- Search form -->
+      <div class="links">
+      <!-- <form action="" class="navbar-wagon-search" style="float:left">
+        <input type="text" class="navbar-wagon-search-input" placeholder="Search for cocktails">
+        <button type="submit" class="navbar-wagon-search-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </form> -->
+        <ul class="list-inline">
+          <li class="list-inline-item"><%= link_to "Add", new_cocktail_path, class: "list-inline-item" %></li>
+        </ul>
+
+      </div>
     </div>
   </div>
-</div>
 </header>
