@@ -4,11 +4,14 @@
   height: 100vh;
   width: 100vw;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('banner-photo.jpeg') no-repeat center center;
-  background-size: cover !important;
+  // background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://static.pexels.com/photos/25921/pexels-photo-25921.jpg') no-repeat center center;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
 }
 .banner h1 {
   font-size: 50px;

@@ -1,5 +1,4 @@
 <%= render 'shared/banner' %>
-<br>
 <div class="container">
   <% if @cocktails.empty? %>
     <p>Theres nothing in the list</p>
@@ -9,13 +8,14 @@
       <% @cocktails.each do |cocktail| %>
         <%= link_to cocktail_path(cocktail) do %>
           <% if cocktail.photo? %>
-            <div class="item"
-              <h4><%= cocktail.name %></h4>
-              <%= image_tag cocktail.photo.url %>
+
+            <div class="item" style="background-image: url('<%= cocktail.photo.url %>');">
+              <h3><%= cocktail.name %></h3>
+              <!-- <%= image_tag cocktail.photo.url %> -->
             </div>
           <% else %>
-            <div class="item"
-              <h4><%= cocktail.name %></h4>
+            <div class="item">
+              <h3><%= cocktail.name %></h3>
             </div>
           <% end %>
 
