@@ -39,8 +39,11 @@ a {
 }
 
 .wrapper {
-  height: 100vh;
-  position: relative;
+  z-index: -10;
+  height: 400px;
+  // width: 100%;
+
+  // position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -49,6 +52,7 @@ a {
 .inner-wrapper {
   // position: absolute;
   margin-top: -150px;
+  //
 }
 
 .float-right {

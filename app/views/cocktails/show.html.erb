@@ -7,28 +7,10 @@ livecode example broke after a few adds
 
  -->
 
-<div class="container">
-  <div class="cocktail-header">
-    <h2><%= @cocktail.name %></h2>
-    <!-- <ul> -->
-    <% @cocktail.doses.each do |dose| %>
-      <!-- <li> -->
-        <p>
-          <%= dose.description %>
-          <%= dose.ingredient.name %><br>
-          dose_path: <%= dose_path %><br>
-          dose_path(dose): <%= dose_path(dose) %><br>
-          dose.id: <%= dose.id %><br>
 
-          -
-          <%= link_to 'Delete', dose, method: :delete %>
-        </p>
-      <!-- </li> -->
-    <% end %>
-    <!-- </ul> -->
-  </div>
+<div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6">
         <div class="wrapper">
           <div class="inner-wrapper">
             <h4>New Dose</h4>
@@ -37,5 +19,27 @@ livecode example broke after a few adds
           </div>
         </div>
     </div>
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6">
+      <div class="cocktail-header">
+        <h2><%= @cocktail.name %></h2>
+        <% if @cocktail.photo? %>
+          <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+        <% end %>
+        <!-- <ul> -->
+        <% @cocktail.doses.each do |dose| %>
+          <!-- <li> -->
+            <p>
+              <%= dose.description %>
+              <%= dose.ingredient.name %><br>
+              -
+              <%= link_to 'Delete', dose, method: :delete %>
+            </p>
+          <!-- </li> -->
+        <% end %>
+        <!-- </ul> -->
+      </div>
+    </div>
+
+
   </div>
 </div>

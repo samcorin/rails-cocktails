@@ -24,7 +24,11 @@ gem 'faker'
 gem 'irbtools', require: 'irbtools/binding'
 gem 'rails-assets-awesomplete', source: 'https://rails-assets.org'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+
+# Uploading stuff
 gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
 
 # Autocomplete
 gem 'searchkick'

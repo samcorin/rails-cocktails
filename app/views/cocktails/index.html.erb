@@ -8,9 +8,18 @@
   <!-- <div class="grid"> -->
       <% @cocktails.each do |cocktail| %>
         <%= link_to cocktail_path(cocktail) do %>
-          <div class="item">
+          <% if cocktail.photo? %>
+            <div class="item"
               <h4><%= cocktail.name %></h4>
-          </div>
+              <%= image_tag cocktail.photo.url %>
+            </div>
+          <% else %>
+            <div class="item"
+              <h4><%= cocktail.name %></h4>
+            </div>
+          <% end %>
+
+
         <% end %>
       <% end %>
   <% end %>
