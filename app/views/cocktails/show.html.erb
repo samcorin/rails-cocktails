@@ -12,41 +12,43 @@ livecode example broke after a few adds
   <div class="show-cocktail">
     <!-- <div class="inner-show"> -->
       <!-- <div class="row"> -->
-        <div class="col-xs-12 col-md-6 inner-show">
-            <!-- <div class="wrapper"> -->
-              <!-- <div class="inner-wrapper"> -->
-                <h4>New Dose</h4>
-                <%= render 'doses/form' %>
-                <br>
-              <!-- </div> -->
-            <!-- </div> -->
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+
+        <!-- FORM -->
+        <div class="col-xs-12 col-md-5 inner-show col-centered">
+          <h4>New Dose</h4>
+          <%= render 'doses/form' %>
         </div>
-        <!-- </div> -->
-        <!-- <div class="inner-show"> -->
-        <div class="col-xs-12 col-md-6 inner-show">
+
+        <!-- DETAILS -->
+        <div class="col-xs-12 col-md-7 inner-show">
         <div>
           <div class="cocktail-header">
             <h2><%= @cocktail.name %></h2>
             <% if @cocktail.photo? %>
-              <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+
+              <%= cl_image_tag @cocktail.photo, :width=>300, :height=>300, :gravity=>"east", :crop=>"fill" %>
             <% end %>
             <!-- <ul> -->
-            <% @cocktail.doses.each do |dose| %>
-              <!-- <li> -->
-                <p>
-                  <%= dose.description %>
-                  <%= dose.ingredient.name %><br>
-                  -
-                  <%= link_to 'Delete', dose, method: :delete %>
-                </p>
-              <!-- </li> -->
-            <% end %>
+            <div class="dose">
+              <% @cocktail.doses.each do |dose| %>
+                <!-- <li> -->
+                  <p>
+                    <span class="dose-desc float-left">
+                      <%= dose.description %>
+                      <%= dose.ingredient.name %>
+                    </span>
+                    <span class="dose-del float-right">
+                      <%= link_to 'Delete', dose, method: :delete %>
+                    </span>
+                  </p>
+                <!-- </li> -->
+              <% end %>
+            </div>
             <!-- </ul> -->
           </div>
         </div>
-        <!-- </div> -->
       </div>
-
-    <!-- </div> -->
+    </div>
   </div>
 </div>
