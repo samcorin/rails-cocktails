@@ -41,7 +41,7 @@ a {
 .wrapper {
   z-index: -10;
   height: 400px;
-  // width: 100%;
+  width: 100%;
 
   // position: relative;
   display: flex;
@@ -60,14 +60,14 @@ a {
 }
 
 .cocktail-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  text-align: center;
-  width: 100%;
-  height: 100px;
-  margin-top: 80px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-around;
+  // flex-direction: column;
+  // text-align: center;
+  // width: 100%;
+  // height: 100px;
+  // margin-top: 150px;
 
   h2 {
     // margin: 0;
@@ -84,4 +84,23 @@ a {
 .back-btn {
   font-size: 2rem;
   vertical-align: middle;
+}
+
+
+.show-cocktail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  text-align: center;
+  // width: 100%;
+  height: 500px;
+  // margin-top: 150px;
+  img {
+    width: 100%;
+  }
+}
+
+.inner-show {
+
 }
