@@ -1,27 +1,29 @@
 <%= render 'shared/banner' %>
-<div class="container">
-  <% if @cocktails.empty? %>
-    <p>Theres nothing in the list</p>
-  <% else %>
-  <div class="masonry">
-  <!-- <div class="grid"> -->
-      <% @cocktails.each do |cocktail| %>
-        <%= link_to cocktail_path(cocktail) do %>
-          <% if cocktail.photo? %>
+<div class="container-wrapper">
+  <div class="container">
+    <% if @cocktails.empty? %>
+      <p>Theres nothing in the list</p>
+    <% else %>
+    <div class="masonry">
+    <!-- <div class="grid"> -->
+        <% @cocktails.each do |cocktail| %>
+          <%= link_to cocktail_path(cocktail) do %>
+            <% if cocktail.photo? %>
 
-            <div class="item" style="background-image: url('<%= cocktail.photo.url %>');">
-              <h3><%= cocktail.name %></h3>
-              <!-- <%= image_tag cocktail.photo.url %> -->
-            </div>
-          <% else %>
-            <div class="item">
-              <h3><%= cocktail.name %></h3>
-            </div>
+              <div class="item" style="background-image: url('<%= cocktail.photo.url %>');">
+                <h3><%= cocktail.name %></h3>
+                <!-- <%= image_tag cocktail.photo.url %> -->
+              </div>
+            <% else %>
+              <div class="item">
+                <h3><%= cocktail.name %></h3>
+              </div>
+            <% end %>
+
+
           <% end %>
-
-
         <% end %>
-      <% end %>
-  <% end %>
+    <% end %>
+    </div>
   </div>
 </div>

@@ -5,9 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 require 'open-uri'
 require 'json'
 
+# Dose.destroy_all
+# Cocktail.destroy_all
 Ingredient.destroy_all
 puts "Adding Ingredients"
 

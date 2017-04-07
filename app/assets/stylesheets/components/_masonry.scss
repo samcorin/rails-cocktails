@@ -1,6 +1,6 @@
 // CSS-ONLY MASONRY
 .masonry {
-    display: inline-block;
+    // display: inline-block;
     // clear: both;
     // column-count: 3;
     column-gap: 1em;
@@ -31,16 +31,21 @@
 }
 
 .item {
-    background-color: #eee;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    margin: 0 0 1em;
-    width: 100%;
-    padding: 5px;
-    min-height: 180px;
-    color: $white;
+
+  background-color: #eee;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // display: flex;
+  display: inline-block;
+  // align-items: center;
+  // justify-content: space-around;
+  text-align: center;
+  margin: 0 0 1em;
+  width: 100%;
+  padding: 5px;
+  min-height: 180px;
+  color: $white;
+  h3 {
+    margin: 0 auto;
+  }
 }
