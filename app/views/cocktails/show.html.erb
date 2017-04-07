@@ -15,7 +15,11 @@ livecode example broke after a few adds
       <!-- <li> -->
         <p>
           <%= dose.description %>
-          <%= dose.ingredient.name %>
+          <%= dose.ingredient.name %><br>
+          dose_path: <%= dose_path %><br>
+          dose_path(dose): <%= dose_path(dose) %><br>
+          dose.id: <%= dose.id %><br>
+
           -
           <%= link_to 'Delete', dose, method: :delete %>
         </p>

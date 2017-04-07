@@ -23,7 +23,10 @@ gem "simple_form"
 gem 'faker'
 gem 'irbtools', require: 'irbtools/binding'
 gem 'rails-assets-awesomplete', source: 'https://rails-assets.org'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+gem 'figaro'
 
+# Autocomplete
 gem 'searchkick'
 
 gem 'sass-rails'
